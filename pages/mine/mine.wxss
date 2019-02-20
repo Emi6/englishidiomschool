@@ -1,0 +1,75 @@
+/* pages/mine/mine.wxss */
+.userinfo-avatar {
+  overflow:hidden;
+  display: flex;
+  width: 164rpx;
+  height: 164rpx;
+  margin: 100rpx auto 30rpx; 
+  border-radius: 50%;
+  /* border: 1px solid #fff; */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  justify-content: center;
+  align-content: center;
+ 
+}
+
+.name-style{
+  text-align: center;
+}
+
+.name-style:after{
+  content: ""; 
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 400rpx;
+  border-top: 18rpx solid #F6F6F6;
+}
+
+
+.mine-sp{
+  display: table;
+  margin-left: 40rpx;
+  margin-bottom: 64rpx;
+}
+
+.mine-fr{
+  height:350rpx;
+}
+
+.mine-dk{
+  width: 222rpx;
+  font-size: 34rpx;
+  color: #444;
+  display: table-cell;
+}
+
+.mine-dk-yd{
+  width: 41rpx;
+  text-align: right;
+  color: #b3b3b3;    
+  font-size: 34rpx;
+  display: table-cell;
+ 
+}
+
+.mine-kg-1{
+  display:table-cell;
+  width:40rpx;
+}
+
+.mine-kg-2{
+  display:table-cell;
+  width:351rpx;
+}
+
+.mine-img image{
+  display:table-cell;
+  height: 25rpx;
+  width: 25rpx;
+
+}
+
+
+/* pages/mine/mine.wxss */
+

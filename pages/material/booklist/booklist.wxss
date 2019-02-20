@@ -1,0 +1,48 @@
+/* pages/material/booklist/booklist.wxss */
+.booklist-img{
+  height: 220rpx;
+  width: 200rpx;
+  flex: 1;
+  position: relative;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+
+}
+
+.booklist-text{
+  flex: 3;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+  margin-top: 40rpx;
+  
+}
+
+.booklist-view{
+  flex-direction: row;
+  display: flex;
+  height: 260rpx;
+}
+
+.booklist-bookname{
+  color: #000;
+  font-size: 32rpx;
+  
+}
+
+.booklist-bookdiscrb{
+  color: #9c9a9c;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis; 
+  margin-right: 20rpx;
+  margin-top: 20rpx;
+  display:-webkit-box; 
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  
+}
+
+.line{
+  border-bottom: 1rpx solid #F0F0F0
+}

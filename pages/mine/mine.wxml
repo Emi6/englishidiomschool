@@ -1,0 +1,36 @@
+<!--pages/mine/mine.wxml-->
+<view class='mine-fr'>
+  <view class="userinfo-avatar" bindtap='login'>
+    <open-data  type="userAvatarUrl"></open-data>
+  </view>
+  <view class="name-style">
+    <open-data type="userNickName" lang="zh_CN"></open-data> 
+  </view>
+</view>
+
+<view class='mine-sp' bindtap='calendars'>
+  <view class="mine-img">
+    <image src="../../assets/tabbar/calendar.png" />
+  </view>
+  <view class='mine-kg-1'></view>
+  <view class='mine-dk'>打卡记录</view>
+  <view class='mine-kg-2'></view>
+  <view class='mine-dk-yd'>></view>
+</view>
+
+<view class='mine-sp'>
+  <view class="mine-img">
+    <image src="../../assets/tabbar/bug.png" />
+  </view>
+  <view class='mine-kg-1'></view>
+  <view class='mine-dk' bindtap='feedbacks'>反馈留言</view>
+  <view class='mine-kg-2'></view>
+  <view class='mine-dk-yd'>></view>
+</view>
+<!-- 
+<button bindtap='login' open-type='getUserInfo'>login</button> -->
+
+
+
+
+

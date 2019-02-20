@@ -1,0 +1,88 @@
+/* pages/word/word.wxss */
+.quote_background image{
+  height: 610rpx;
+  width: 750rpx;
+}
+
+swiper{
+ height: 480rpx;
+ width: 617rpx; 
+ box-shadow:0px 0px 10px #000;
+
+}
+
+.quote_detail{
+  /* position: relative;
+  display: flex;
+  top:330rpx;
+  justify-content: center; */
+  background-color: white;
+  height: auto;
+  width: 650rpx;
+  box-shadow:1px 1px 4px black;
+  text-align: center;
+}
+
+.quote_template{
+  position: relative;
+  display: flex;
+  top:400rpx;
+  justify-content: center;
+}
+
+.quote_background{
+  position: absolute;
+  margin-top: 0 rpx;
+  
+}
+
+.img{
+  width: 620rpx;
+  height: 440rpx;
+}
+
+.button-sp-area{
+  position: relative;
+  display: flex; 
+  flex-direction: row;
+  justify-content: center;
+  top:500rpx;
+}
+
+.quote_line_fr{
+  width:210rpx;
+  height:2rpx; 
+  background:#E0E0E0;
+  box-shadow:0px 0px 1px #000;
+  
+  
+}
+
+.quote_line_template{
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.word_Category{
+  position: absolute;
+  top: 40rpx;
+  left:500rpx;
+  width: 250rpx;
+  transform: rotate(45deg);
+  background-color: red;
+  /* text-align:right; */
+}
+
+.word_menu_xl{
+  position: absolute;
+  top: 10rpx;
+  left: 300rpx;
+}
+
+.word_menu_back{
+  position: absolute;
+  top: 320rpx;
+  left: 580rpx;
+  
+}

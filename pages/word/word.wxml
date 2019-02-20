@@ -1,0 +1,41 @@
+<!--pages/word/word.wxml-->
+<view class='quote_background'>
+  <image src="http://bmob-cdn-22880.b0.upaiyun.com/2018/12/31/df61fd7b40c8786680ad640a6c0d9f36.jpg"></image>
+  <view class='word_menu_xl'>下拉刷新</view>
+  <view class='word_menu_back' bindtap='onReturnToday'>返回今日</view>
+</view>
+
+<view class='quote_template'>
+<view class='quote_detail'>
+  <view class='word_Category'>{{ongetCategory}}</view>
+  <view>{{ongetYear}}-{{ongetMonth}}-{{ongetDay}}</view>
+  <view class='quote_line_template'>
+  <view class='quote_line_fr'></view>
+  </view>
+  <view>{{ongetWord}}</view>
+  <view>{{ongetTranslation}}</view>
+  <view style='text-align:left; margin:0rpx 20rpx;'>{{ongetParagraph}}</view>
+  <view style='text-align:right; margin-right:20rpx;'>——出自《{{ongetSource}}》</view>
+  
+  
+
+  <!-- <swiper indicator-dots='true' current='{{current}}'bindchange='onSlideChangeEnd'>
+    <block wx:for="{{imgurls}}" wx:key="{{index}}">
+      <swiper-item>
+        <image class='img' src='{{item}}'/>
+      </swiper-item>
+    </block>
+  </swiper> -->
+</view>
+</view>
+
+<view class="button-sp-area" wx:if="{{index==0}}">
+  <button bindtap='onDaKa' hidden='{{false}}' disabled="{{status}}">打卡</button>
+  <button  open-type="share">转发</button>
+</view>
+
+<view class="button-sp-area" wx:if="{{index>0}}">
+  <button  open-type="share" >转发</button>
+  <button  hidden='{{true}}' >打卡</button>
+</view>
+

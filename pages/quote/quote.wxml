@@ -1,0 +1,26 @@
+<!--pages/quote/quote.wxml-->
+<view class='quote_background'>
+  <image src="http://bmob-cdn-22880.b0.upaiyun.com/2018/12/31/df61fd7b40c8786680ad640a6c0d9f36.jpg"></image>
+  <view class='word_menu_xl'>下拉刷新</view>
+  <view class='word_menu_back' bindtap='onReturnToday'>返回今日</view>
+</view>
+
+<view class='quote_template'>
+<view class='quote_detail'>
+  <view>{{ongetYear}}-{{ongetMonth}}-{{ongetDay}}</view>
+  <view class='quote_line_template'>
+  <view class='quote_line_fr'></view>
+  </view>
+  <view style='text-align:left; margin:0rpx 20rpx;'>"{{ongetQuote}}"</view>
+  <view style='text-align:right; margin-right:20rpx;'>——出自《{{ongetSource}}》</view>
+
+</view>
+</view>
+
+<view class="button-sp-area">
+  <!-- <button bindtap='onDaKa' hidden='{{false}}'  disabled="{{status}}">打卡</button> -->
+  <button  open-type="share">转发</button>
+</view>
+
+
+

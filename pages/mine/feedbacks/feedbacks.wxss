@@ -1,0 +1,9 @@
+/* pages/mine/feedbacks/feedbacks.wxss */
+textarea{
+  border: 2rpx black solid;
+  margin: auto;
+  width:560rpx;
+  height: 300rpx; 
+  margin-top:5rpx;
+  padding: 3rpx;
+}

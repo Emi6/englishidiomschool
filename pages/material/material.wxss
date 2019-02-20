@@ -1,0 +1,50 @@
+/* pages/material/material.wxss */
+.material-view{
+  height: 190rpx;
+  
+}
+.material-img{
+  height: 150rpx;
+  width: 150rpx;
+  position: relative;
+  float: left;
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx
+
+  
+ 
+ 
+  
+}
+
+.material-name{
+  color: #000;
+  font-size: 40rpx;
+  position: relative;
+  float: left;
+  margin-left: 40rpx;
+  height: 190rpx;
+  line-height: 190rpx;
+  
+
+
+
+}
+
+.material-num{
+  color: #9c9a9c;
+  font-size: 30rpx;
+  position: relative;
+  float:right;
+  margin-right: 40rpx;
+  height: 190rpx;
+  line-height: 190rpx;
+
+   
+  
+}
+
+.line{
+  border-bottom: 1rpx solid #F0F0F0
+}

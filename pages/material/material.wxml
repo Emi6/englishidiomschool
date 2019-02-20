@@ -1,0 +1,14 @@
+<!--pages/material/material.wxml-->
+  <scroll-view wx:for="{{array}}" wx:key="{{index}}" scroll-y="true">
+    <navigator class='material-view' url="booklist/booklist?id={{index}}">
+      <!-- <image src='{{item.bookimg}}' class='material-img'></image> -->
+      <text class='material-name' >{{item}}</text> 
+      <text class='material-num'  >{{item}}></text>
+      
+    </navigator>
+   
+    <view class='line'></view>
+    
+
+  </scroll-view>
+  
