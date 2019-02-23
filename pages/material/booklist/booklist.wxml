@@ -1,10 +1,10 @@
 <!--pages/material/booklist/booklist.wxml-->
 <view wx:for="{{bookList}}" wx:key="{{index}}">
-  <navigator class='booklist-view' url="bookdetail/bookdetail?id={{index}}">
-    <image class="booklist-img"src='{{item.bookimg}}'></image>
+  <navigator class='booklist-view' url="bookdetail/bookdetail?id={{index}}&bookname={{item.bookName}}">
+    <image class="booklist-img"src='{{item.bookImg}}'></image>
     <view class='booklist-text'>
-      <view class='booklist-bookname'>{{item.bookname}}</view>
-      <view class='booklist-bookdiscrb'>{{item.bookdiscrb}}</view>
+      <view class='booklist-bookname'>{{item.bookName}}</view>
+      <view class='booklist-bookdiscrb'>{{item.bookDiscrb}}</view>
     </view>
   </navigator>
    <view class='line'></view>

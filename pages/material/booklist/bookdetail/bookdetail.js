@@ -1,11 +1,12 @@
 // pages/material/booklist/bookdetail/bookdetail.js
+var Bmob = require('../../../../utils/bmob.js');
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    
+    bookDetail:[]
     // bookList:[]
   },
 
@@ -14,16 +15,19 @@ Page({
    */
   onLoad: function (params) {
     var that = this;
-    wx.request({
-      url: "https://www.easy-mock.com/mock/5c116c6ab45e5d3babb4fc8e/itsme/sharewithme",
-      success: function (res) {
-        // console.log(res.data.data.material[params.id].bookList[params.id].bookcontent);
-        that.setData({
-          bookcontent: res.data.data.material[params.id].bookList[params.id].bookcontent,
-          bookimg: res.data.data.material[params.id].bookList[params.id].bookimg
-        })
-      }
-    })
+    this.rdBookDetail(params.bookname);
+    // wx.request({
+    //   url: "https://www.easy-mock.com/mock/5c116c6ab45e5d3babb4fc8e/itsme/sharewithme",
+    //   success: function (res) {
+    //     // console.log(res.data.data.material[params.id].bookList[params.id].bookcontent);
+    //     that.setData({
+    //       bookcontent: res.data.data.material[params.id].bookList[params.id].bookcontent,
+    //       bookimg: res.data.data.material[params.id].bookList[params.id].bookimg
+    //     })
+    //   }
+    // })
+
+
 
 
   },
@@ -75,5 +79,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  rdBookDetail: function (name) {
+    var that = this;
+    var WordBase = Bmob.Object.extend("material_database");
+    var q = new Bmob.Query(WordBase);
+   
+    q.equalTo("bookName", name)
+
+    q.find({
+
+      success: function (results) {
+        console.log(results)
+
+        that.setData({
+          bookDetail: results
+        })
+
+      },
+    })
   }
 })

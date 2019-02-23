@@ -15,7 +15,7 @@ Page({
     current: 2,
     index: 0,
     status: false,
-    
+    showModalStatus: false
     
   },
 
@@ -354,6 +354,63 @@ Page({
 
   //   }
   //   // console.log(that.data.status)
+  },
+
+  popwindow: function () {
+    wx.showModal({ title: '提示', content: '这是一个实例', success: function (res) { if (res.confirm) { console.log('用户点击确认') } } })
+
+  },
+  powerDrawer: function (e) {
+    var currentStatu = e.currentTarget.dataset.statu;
+    console.log(currentStatu)
+    this.util(currentStatu)
+  },
+
+  util: function (currentStatu) {
+    var that = this;
+    var animation = wx.createAnimation({
+      duration: 200,
+      timingFunction: "linear",
+      delay: 0
+    });
+
+    this.animation = animation;
+    animation.opacity(0).rotateX(-100).step();
+
+    this.setData({
+      animationData: animation.export()
+    })
+
+    setTimeout(function () {
+      animation.opacity(1).rotateX(0).step();
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 200)
+
+
+    if (currentStatu == "close") {
+      this.setData(
+        {
+          showModalStatus: false
+        }
+      );
+    }
+
+
+
+
+
+    if (currentStatu == "open") {
+      this.setData(
+        {
+          showModalStatus: true
+        }
+
+
+      );
+
+    }
   }
 
 })

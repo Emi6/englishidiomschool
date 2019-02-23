@@ -27,7 +27,7 @@ Page({
     var cur_month = date.getMonth() + 1
     var cur_day = date.getDate()
     this.onGetQuote(cur_day, cur_month, cur_year);
-    this.onCheckdk(cur_day, cur_month, cur_year);
+    // this.onCheckdk(cur_day, cur_month, cur_year);
     this.setData({
       cur_year,
       cur_month,
@@ -236,27 +236,27 @@ Page({
 
   },
 
-  onCheckdk: function (day, month, year) {
-    var that = this
-    var currentUser = Bmob.User.current();
-    var usertask = Bmob.Object.extend("user_task");
-    var q = new Bmob.Query(usertask);
-    // console.log(that.data.status)
-    q.equalTo("sss", currentUser.id)
-    q.equalTo("Day", day.toString());
-    q.equalTo("Month", month.toString());
-    q.equalTo("Year", year.toString());
-    q.find().then(res => {
-      console.log(res.length)
-      if (res.length != 0) {
-        var status = true
-        that.setData({
-          status
-        })
-      }
-    });
+  // onCheckdk: function (day, month, year) {
+  //   var that = this
+  //   var currentUser = Bmob.User.current();
+  //   var usertask = Bmob.Object.extend("user_task");
+  //   var q = new Bmob.Query(usertask);
+  //   // console.log(that.data.status)
+  //   q.equalTo("sss", currentUser.id)
+  //   q.equalTo("Day", day.toString());
+  //   q.equalTo("Month", month.toString());
+  //   q.equalTo("Year", year.toString());
+  //   q.find().then(res => {
+  //     console.log(res.length)
+  //     if (res.length != 0) {
+  //       var status = true
+  //       that.setData({
+  //         status
+  //       })
+  //     }
+  //   });
     
-  }
+  // }
 
 
 })

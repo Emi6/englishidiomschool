@@ -30,12 +30,24 @@
 </view>
 
 <view class="button-sp-area" wx:if="{{index==0}}">
-  <button bindtap='onDaKa' hidden='{{false}}' disabled="{{status}}">打卡</button>
+  <button bindtap='onDaKa' hidden='{{false}}' disabled="{{status}}" >打卡</button>
   <button  open-type="share">转发</button>
+
+  <view class='drawer_screen' bindtap='powerDrawer'data-statu='close' wx:if="{{showModalStatus}}"/>
+    <view class='drawer_box' animation="{{animationData}}" wx:if="{{showModalStatus}}">
+    <!-- <view class='drawer_box'> -->
+      <view class='drawer_title'>弹窗标题</view>
+      <label class='title col-0'>标题</label>
+      <input class='input_base input_h30 col-1'value='可自行定义内容'></input>
+    <!-- </view> -->
+      <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+    
+    </view>
 </view>
 
 <view class="button-sp-area" wx:if="{{index>0}}">
   <button  open-type="share" >转发</button>
-  <button  hidden='{{true}}' >打卡</button>
+  <button  hidden='{{true}}'>打卡</button>
+ 
 </view>
 
