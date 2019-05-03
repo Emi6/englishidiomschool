@@ -18,21 +18,6 @@ Page({
     var z=[]
     this.rdDataBase();
  
-   
-    // this.getNum();
-   
-    
-    // wx.request({
-    //   url: "https://www.easy-mock.com/mock/5c116c6ab45e5d3babb4fc8e/itsme/sharewithme",
-    //   success:function(res){
-    //     // console.log(res.data.data.bookList);
-    //     console.log(res);
-    //     that.setData({
-    //       material:res.data.data.material,
-    //       // id: res.data.data.material.bookList
-    //     })
-    //           }
-    // })
   },
 
   /**
@@ -91,20 +76,13 @@ Page({
     var newset = new Set();
     var array = []
  
-    // q.equalTo("Day", day.toString())
-    // q.equalTo("Month", month.toString())
-    // q.equalTo("Year", year.toString())
+    
     
     q.find({
       
       success: function (results) {
         console.log(results)
-        // const s = new Set();
         
-
-        
-  
-        // console.log(results.bookTypes);
         for (var i = 0; i < results.length; i++) {
          
           var object = results[i];
@@ -113,15 +91,6 @@ Page({
           var getBookNum = new String();  
           var getBookImg = new String()  
        
-  
-
-        //   var getMonth = new String();
-        //   var getDay = new String();
-        //   var getNum = new String();
-
-        //   var getSource = new String();
-
-          // var getQuote = new String();
           getBookType = object.get("bookTypes")
           getBookNum = object.get("bookNum")
           getBookImg=object.get("bookImg")
@@ -141,39 +110,21 @@ Page({
             for (var t=0;t<array.length;t++){
             that.checknum(array[t])
             }
-            // that.checknum('雅思')
-            // that.checknum('托福')
-            // that.checknum('杂书')
+            
           }
   
-          // that.data.array.push(array)
-
-          // var l=[5,4]
-          // console.log(l)
-
-          // var z = [{ booktype:array[0], booknum:l[0] }, { booktype:array[1], booknum:l[1]}]
-          // console.log(z)
-
-
-     
-        //   getMonth = object.get("Month")
-        //   getDay = object.get("Day")
-        //   getQuote = object.get("Quote")
-        //   getSource = object.get("Source")
-        //   getNum = object.get("Num")
+          
           that.setData({
            results,
            newset,
-          //  array
-          //  z
+          
            
           });
         
         
 
         }
-        // console.log(array)
-        // that.checknum(array)
+        
       
       },
       error: function (error) {
@@ -190,26 +141,7 @@ Page({
    
   
 
-    // console.log(this.data['array'])
     
-    // return s
-    // this.checkNum(this.array)
-
-    
-    // var items = this.data.s;
-    // var array = Array.from(items);
-
-    // console.log(array[1])
-
-    // var l = [5, 4]
-    // console.log(l)
-
-    // var z = [{ booktype: array[0], booknum: l[0] }, { booktype: array[1], booknum: l[1] }]
-    // console.log(z)
-    // that.setData({
-    //   z
-    // })
-
   },
 
   checknum: function(array){
@@ -221,9 +153,7 @@ Page({
     console.log(array)
     var boknum = []
 
-    // while (i < array.length){
-    // for(var i=0;i<array.length;i++){
-      // console.log(array[i])
+    
       
       var t = q.equalTo("bookTypes", array) 
     
@@ -245,11 +175,13 @@ Page({
           that.data.z.push(obj)
          
           
-          // boknum.push(results.length)
-          console.log(Object.values(that.data.z))
-          console.log(Object.keys(that.data.z))
+          
+          // console.log(Object.values(that.data.z))
+          // console.log(Object.keys(that.data.z))
+          var values = Object.keys(that.data.z).map(e => that.data.z[e])
+          var byNum = values.slice(0)
 
-          var byNum = Object.values(that.data.z).slice(0);
+          // var byNum = Object.values(that.data.z).slice(0);
           byNum.sort(function (a, b) {
             return b.booknum-a.booknum ;
           });
@@ -258,44 +190,25 @@ Page({
       
           
           
-          // that.data.boknum.push(results.length)
+         
           that.setData({
             z: that.data.z,
             byNum
           }) 
-          // that.getPaiXu(that.data.z)
+          
          
         }
          
          
         })
       
-      // console.log(that.data.boknum)
-      // console.log(array)
-      // that.mergebokdtl(array, boknum)
-    // }
-
-   
-    // that.setData({
-    //   boknum:boknum
-    // });
-    // console.log(boknum)
-    // console.log(array)
-
-    // that.mergebokdtl(array, boknum)
-   
-    // console.log(this.data.boknum)
-    // console.log(array)
-
-    // that.mergebokdtl(array, boknum)
-   
+      
   },
-  // getPaiXu: function (z) {
-  //   var t=[]
+ 
 
 
 
-  // }
+ 
   
   
 })

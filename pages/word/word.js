@@ -1,21 +1,19 @@
 // pages/word/word.js
-var util = require('../../utils/utils.js')
+var util = require('../../utils/utils.js');
 var Bmob = require('../../utils/bmob.js');
+const innerAudioContext = wx.createInnerAudioContext();
+
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    imgurls: [
-      "../../assets/images/word3.png",
-      "../../assets/images/word2.png",
-      "../../assets/images/word.png",
-    ],
-    current: 2,
+    
     index: 0,
     status: false,
-    showModalStatus: false
+    showModalStatus: false,
+    
     
   },
 
@@ -96,28 +94,8 @@ Page({
 
   onGetWord: function (day,month,year) {
     var that = this;
-    // var currentUser = Bmob.User.current();
     var WordBase = Bmob.Object.extend("word_database");
     var q = new Bmob.Query(WordBase);
-    // q.equalTo("Day", day.toString());
-    // // 查询所有数据
-    // q.find({
-    //   success: function (results) {
-    //     console.log("共查询到 " + results.length + " 条记录");
-    //     // 循环处理查询到的数据
-    //     for (var i = 0; i < results.length; i++) {
-    //       var object = results[i];
-    //       console.log(object.id + ' - ' + object.get('Translation'));
-    //     }
-    //   },
-    //   error: function (error) {
-    //     console.log("查询失败: " + error.code + " " + error.message);
-    //   }
-    // });
-    
-    // console.log(day)
-    // console.log(month)
-    // console.log(year)
     q.equalTo("Day", day.toString())
     q.equalTo("Month", month.toString())
     q.equalTo("Year", year.toString())
@@ -165,28 +143,8 @@ Page({
 
   onGetCurWord: function (Num) {
     var that = this;
-    // var currentUser = Bmob.User.current();
     var WordBase = Bmob.Object.extend("word_database");
     var q = new Bmob.Query(WordBase);
-    // q.equalTo("Day", day.toString());
-    // // 查询所有数据
-    // q.find({
-    //   success: function (results) {
-    //     console.log("共查询到 " + results.length + " 条记录");
-    //     // 循环处理查询到的数据
-    //     for (var i = 0; i < results.length; i++) {
-    //       var object = results[i];
-    //       console.log(object.id + ' - ' + object.get('Translation'));
-    //     }
-    //   },
-    //   error: function (error) {
-    //     console.log("查询失败: " + error.code + " " + error.message);
-    //   }
-    // });
-
-    // console.log(day)
-    // console.log(month)
-    // console.log(year)
     q.equalTo("Num", Num.toString())
 
     q.find({
@@ -234,9 +192,6 @@ Page({
   onPullDownRefresh:function(){
     var that=this
     var cur_num = that.data.ongetNum-1
-    // var cur_day=that.data.cur_day-1
-    // var cur_month = that.data.cur_month 
-    // var cur_year = that.data.cur_year
     var index=that.data.index+1
     wx.showNavigationBarLoading()
     setTimeout(function(){
@@ -244,9 +199,6 @@ Page({
     wx.hideNavigationBarLoading()
     wx.stopPullDownRefresh()
       that.setData({
-        // cur_day,
-        // cur_month,
-        // cur_year,
         ongetNum: cur_num,
         index
       })
@@ -268,10 +220,11 @@ Page({
 
   },
 
-  onDaKa: function () {
+  onDaKa: function (e) {
     var that = this;
     var currentUser = Bmob.User.current();
     console.log(currentUser)
+    if (currentUser!=null){
     var date = new Date();
     var daka_year = date.getFullYear();
     var daka_month = date.getMonth() + 1;
@@ -320,14 +273,18 @@ Page({
       })
 
     }, diff)
+    }else{
+      this.powerDrawer(e)
+      console.log(111)
+    }
   },
 
   onCheckdk:function(day,month,year){
     var that=this
     var currentUser = Bmob.User.current();
+    if (currentUser!=null){
     var usertask = Bmob.Object.extend("user_task");
     var q = new Bmob.Query(usertask);
-    // console.log(that.data.status)
     q.equalTo("sss", currentUser.id)
     q.equalTo("Day", day.toString());
     q.equalTo("Month", month.toString());
@@ -340,20 +297,8 @@ Page({
         status
       }) 
       }
-    });
-  //   if (q.equalTo("sss", "==", currentUser.id) && q.equalTo("Day", "==", day.toString()) && q.equalTo("Month", "==", month.toString()) && q.equalTo("Year", "==",year.toString())){
-  //     var status = true
-  //     that.setData({
-  //       status
-  //     }) 
-  //   }else{
-  //     var status = false
-  //     that.setData({
-  //       status
-  //     }) 
-
-  //   }
-  //   // console.log(that.data.status)
+      });
+    }
   },
 
   popwindow: function () {
@@ -411,6 +356,17 @@ Page({
       );
 
     }
+  },
+
+  playaudio:function(){
+    var that=this;
+    // innerAudioContext.src = "http://media.shanbay.com/audio/us/{{that.data.ongetWord}}.mp3";
+    console.log(innerAudioContext.src)
+    const b = that.data.ongetWord
+    const url ='http://media.shanbay.com/audio/us/'+b+'.mp3'
+    innerAudioContext.src =url
+    console.log(that.data.ongetWord)
+    innerAudioContext.play();
   }
 
 })

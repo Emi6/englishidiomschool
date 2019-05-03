@@ -9,7 +9,9 @@
     "pages/material/booklist/booklist",
     "pages/material/booklist/bookdetail/bookdetail",
     "pages/mine/calendars/calendars",
-    "pages/mine/feedbacks/feedbacks"
+    "pages/mine/feedbacks/feedbacks",
+    "pages/mine/officialacc/officialacct",
+    "pages/sentence/sentence"
     
   ],
   "window":{
@@ -34,6 +36,13 @@
         "iconPath": "assets/tabbar/beidanci.png",
         "selectedIconPath": "assets/tabbar/beidanci2.png",
         "text": "每日单词"
+      },
+
+      {
+        "pagePath": "pages/sentence/sentence",
+        "iconPath": "assets/tabbar/icon_xuexiziliao.png",
+        "selectedIconPath": "assets/tabbar/ziliao2.png",
+        "text": "每日口语"
       },
 
       {

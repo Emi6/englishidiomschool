@@ -1,10 +1,15 @@
 <!--pages/material/booklist/bookdetail/bookdetail.wxml-->
 <view wx:for="{{bookDetail}}" wx:key="{{index}}">
-  
-<image class="booklist-img"src='{{item.bookPicture}}'></image> 
-<view class='booklist-bookname'>{{item.bookContent}}</view>
+<view class='imagesize'>
+
+<image class="booklist-img" src='{{item.bookPicture}}'></image> 
+
+</view>
+
+
+
+<view class='booklist-bookname' style="white-space:pre-wrap;text-align:justify">{{item.bookContent}}</view>
  
 </view>
 
- <!-- <view class='booklist-bookname'>{{bookDetail.bookContent}}</view>
- <image class="booklist-img"src='{{bookDetail.bookPicture}}'></image> -->
+ 

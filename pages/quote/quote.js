@@ -7,14 +7,8 @@ Page({
    * Page initial data
    */
   data: {
-    imgurls:[
-      "../../assets/images/quote-detail3.png",
-      "../../assets/images/quote-detail2.png",
-      "../../assets/images/quote-detail.png",
-    ],
-    current:2,
-    index:3,
-    status:false
+
+
 
   },
 
@@ -27,12 +21,10 @@ Page({
     var cur_month = date.getMonth() + 1
     var cur_day = date.getDate()
     this.onGetQuote(cur_day, cur_month, cur_year);
-    // this.onCheckdk(cur_day, cur_month, cur_year);
     this.setData({
       cur_year,
       cur_month,
       cur_day
-
     })
 
   },
@@ -94,28 +86,8 @@ Page({
 
   onGetQuote: function (day, month, year) {
     var that = this;
-    // var currentUser = Bmob.User.current();
     var WordBase = Bmob.Object.extend("quote_database");
     var q = new Bmob.Query(WordBase);
-    // q.equalTo("Day", day.toString());
-    // // 查询所有数据
-    // q.find({
-    //   success: function (results) {
-    //     console.log("共查询到 " + results.length + " 条记录");
-    //     // 循环处理查询到的数据
-    //     for (var i = 0; i < results.length; i++) {
-    //       var object = results[i];
-    //       console.log(object.id + ' - ' + object.get('Translation'));
-    //     }
-    //   },
-    //   error: function (error) {
-    //     console.log("查询失败: " + error.code + " " + error.message);
-    //   }
-    // });
-
-    // console.log(day)
-    // console.log(month)
-    // console.log(year)
     q.equalTo("Day", day.toString())
     q.equalTo("Month", month.toString())
     q.equalTo("Year", year.toString())
@@ -202,9 +174,6 @@ Page({
   onPullDownRefresh: function () {
     var that = this
     var cur_num = that.data.ongetNum - 1
-    // var cur_day=that.data.cur_day-1
-    // var cur_month = that.data.cur_month 
-    // var cur_year = that.data.cur_year
     var index = that.data.index + 1
     wx.showNavigationBarLoading()
     setTimeout(function () {
@@ -212,9 +181,6 @@ Page({
       wx.hideNavigationBarLoading()
       wx.stopPullDownRefresh()
       that.setData({
-        // cur_day,
-        // cur_month,
-        // cur_year,
         ongetNum: cur_num,
         index
       })
@@ -236,27 +202,5 @@ Page({
 
   },
 
-  // onCheckdk: function (day, month, year) {
-  //   var that = this
-  //   var currentUser = Bmob.User.current();
-  //   var usertask = Bmob.Object.extend("user_task");
-  //   var q = new Bmob.Query(usertask);
-  //   // console.log(that.data.status)
-  //   q.equalTo("sss", currentUser.id)
-  //   q.equalTo("Day", day.toString());
-  //   q.equalTo("Month", month.toString());
-  //   q.equalTo("Year", year.toString());
-  //   q.find().then(res => {
-  //     console.log(res.length)
-  //     if (res.length != 0) {
-  //       var status = true
-  //       that.setData({
-  //         status
-  //       })
-  //     }
-  //   });
-    
-  // }
-
-
+  
 })

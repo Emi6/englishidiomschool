@@ -4,7 +4,8 @@
     <open-data  type="userAvatarUrl"></open-data>
   </view>
   <view class="name-style">
-    <open-data type="userNickName" lang="zh_CN"></open-data> 
+    <text wx:if="{{condition==false}}" bindtap='login'>尚未登录</text>
+    <open-data type="userNickName" lang="zh_CN" wx:else="{{condition==true}}" ></open-data> 
   </view>
 </view>
 
@@ -27,8 +28,17 @@
   <view class='mine-kg-2'></view>
   <view class='mine-dk-yd'>></view>
 </view>
-<!-- 
-<button bindtap='login' open-type='getUserInfo'>login</button> -->
+
+<view class='mine-sp'>
+  <view class="mine-img">
+    <image src="../../assets/tabbar/gongzhonghao.png" />
+  </view>
+  <view class='mine-kg-1'></view>
+  <view class='mine-dk' bindtap='officialacct'>公众号</view>
+  <view class='mine-kg-2'></view>
+  <view class='mine-dk-yd'>></view>
+</view>
+
 
 
 

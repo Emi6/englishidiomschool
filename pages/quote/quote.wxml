@@ -11,16 +11,17 @@
   <view class='quote_line_template'>
   <view class='quote_line_fr'></view>
   </view>
-  <view style='text-align:left; margin:0rpx 20rpx;'>"{{ongetQuote}}"</view>
+  <view style='text-align:justify; margin:10rpx 20rpx 0 20rpx' >"{{ongetQuote}}"</view>
   <view style='text-align:right; margin-right:20rpx;'>——出自《{{ongetSource}}》</view>
 
 </view>
 </view>
 
 <view class="button-sp-area">
-  <!-- <button bindtap='onDaKa' hidden='{{false}}'  disabled="{{status}}">打卡</button> -->
   <button  open-type="share">转发</button>
+ 
 </view>
+
 
 
 

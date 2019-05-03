@@ -1,0 +1,212 @@
+/* pages/sentence/sentence.wxss */
+
+page{
+  background-color: #CCCCCC;
+  height: 900px;
+}
+.header{
+ 
+ display:block;
+ position:relative;
+ top:32rpx;
+ text-align: row;
+ margin: 0 14px;
+ font-size: 15px;
+}
+
+text{
+  display: block;
+}
+
+.exp{
+ display: block;
+ position: absolute;
+ text-align: row;
+ top: 116rpx;
+ margin:0 28rpx;
+ width: 696rpx;
+ height: 422rpx;
+ background-color: #FFFFFF;
+ 
+}
+
+.follow{
+ display:block;
+position: absolute;
+ /* position:relative;  */
+ top:556rpx;
+ margin:0 28rpx;
+ width: 696rpx;
+ height:154rpx;
+ background-color: #FFF;
+
+}
+
+.display{
+ display:block;
+ position:absolute;
+ top:726rpx;
+ margin:0 28rpx;
+ width: 696rpx;
+ height:850rpx;
+ background-color: #FFF;
+}
+
+.exp-1-1{
+  width:540rpx;
+  height:136rpx;
+  border-bottom:1px solid #AAA;
+  border-right: 1px solid #AAA;
+  font-size: 13px;
+}
+
+.exp-1-2{
+  display: block;
+  position: relative;
+  top:-138rpx;
+  left:540rpx;
+  width:156rpx ;
+  height: 136rpx;
+  border-bottom: 1px solid #AAA;
+ 
+}
+
+.exp-1-2 image{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: -30rpx;
+  margin-left: -30rpx;
+}
+
+.exp-avatar{
+  width: 154rpx;
+  height: 154rpx;
+  background-color: #02A7F0;
+  border-radius: 50%;
+}
+
+.exp-avatar{
+  position: absolute;
+  top:176rpx;
+  left:214rpx;
+}
+
+.exp-2-name{
+  width: 70rpx;
+  height: 30rpx;
+  position:absolute;
+  top: 222rpx;
+  left:428rpx;
+  font-size:14px;
+  color: #02A7F0;
+}
+
+.exp-2-up{
+  /* width:36px ; */
+  height:30rpx;
+  position:absolute;
+  top:272rpx;
+  left:438rpx;
+  font-size:14px;
+ 
+}
+
+.exp-2-time{
+  width:148rpx ;
+  height:30rpx;
+  position:absolute;
+  top:338rpx;
+  left:214rpx;
+  font-size:14px; 
+  color:#AAAAAA;
+}
+
+.exp-heart image{
+  width:22rpx ;
+  height:24rpx;
+  position:absolute;
+  top:282rpx;
+  left:406rpx;
+}
+
+.follow-button-1 button{
+  height:76rpx; 
+  width:182rpx;
+  position:absolute;
+  top:30rpx;
+  left:132rpx;
+  display: table;
+ 
+
+}
+
+
+.follow-button-2 button{
+  position:absolute;
+  top:30rpx;
+  left:378rpx;
+  height:76rpx; 
+  width:182rpx;
+  display: table;
+ 
+ 
+}
+
+.weui-btn text{
+  text-align: middle;
+  display: table-cell;
+}
+
+.display-avatar{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: #02A7F0;
+  border-radius: 50%;
+}
+
+.display-avatar{
+  position: absolute;
+  top:38rpx;
+  left:38rpx;
+  font-size: 14px;
+}
+
+.display-user{
+  font-size: 14px;
+  position: absolute;
+  top:70rpx;
+  left:176rpx;
+}
+
+.display-time{
+  font-size: 14px;
+  position: absolute;
+  top:100rpx;
+  left:176rpx;
+}
+
+.display-like{
+  font-size: 14px;
+  position: absolute;
+  top:93rpx;
+  left:624rpx;
+}
+
+.display-heart image{
+  width:44rpx ;
+  height:30rpx;
+  position: absolute;
+  top:96rpx;
+  left:558rpx;
+}
+
+.line{
+  position: relative;
+  top:172rpx;
+  height: 1rpx;
+  margin: auto 28rpx;
+  background-color:#797979;
+}

@@ -1,1 +1,24 @@
 /* pages/material/booklist/bookdetail/bookdetail.wxss */
+.booklist-img{
+  height: 220rpx;
+  width: 200rpx;
+  
+
+}
+
+.imagesize{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  top: 40rpx;
+  margin:20rpx;
+  bottom:40rpx
+}
+
+.booklist-bookname{
+  position: absolute;
+  margin: 40rpx;
+  top: 280 rpx;
+}
+
+

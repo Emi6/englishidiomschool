@@ -16,16 +16,7 @@ Page({
   onLoad: function (params) {
     var that = this;
     this.rdBookDetail(params.bookname);
-    // wx.request({
-    //   url: "https://www.easy-mock.com/mock/5c116c6ab45e5d3babb4fc8e/itsme/sharewithme",
-    //   success: function (res) {
-    //     // console.log(res.data.data.material[params.id].bookList[params.id].bookcontent);
-    //     that.setData({
-    //       bookcontent: res.data.data.material[params.id].bookList[params.id].bookcontent,
-    //       bookimg: res.data.data.material[params.id].bookList[params.id].bookimg
-    //     })
-    //   }
-    // })
+    
 
 
 

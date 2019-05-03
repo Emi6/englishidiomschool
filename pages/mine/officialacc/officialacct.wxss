@@ -1,0 +1,27 @@
+/* pages/mine/officialacc/officialacct.wxss */
+.img{
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top:60rpx  
+
+}
+
+.img image{
+
+  height:400rpx;
+  width:400rpx;
+}
+
+.discription{
+ margin: 20rpx;
+ text-align: center;
+  
+}
+
+.bold{
+ font-weight: bold
+}
+

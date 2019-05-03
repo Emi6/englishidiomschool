@@ -1,14 +1,10 @@
-// pages/mine/feedbacks/feedbacks.js
-var Bmob = require('../../../utils/bmob.js');
+// pages/mine/officialacc/officialacct.js
 Page({
 
   /**
    * Page initial data
    */
   data: {
-    submit_status: false,
-  
-   
 
   },
 
@@ -66,32 +62,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
- 
- bindFormSubmit: function(e){
-   var that=this
-   var date = new Date()
-
-   console.log(e.detail.value.textarea)
-   that.setData({
-      submit_status:true
-   })
-
-   var Feedback = Bmob.Object.extend("feedback_database");
-   var feedback = new Feedback();
-   // 添加数据，第一个入口参数是Json数据
-   feedback.save({
-     feedback: e.detail.value.textarea,
-     
-   }, {
-       success: function (feedback) {
-         // 添加成功
-       },
-       error: function (feedback, error) {
-         // 添加失败
-       }
-     });
- }
-
-  
+  }
 })

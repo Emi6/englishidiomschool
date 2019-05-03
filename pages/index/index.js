@@ -13,13 +13,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+   
+    // setTimeout(() => {
+    //   this.$preload('list', api.getBigList())
+    // }, 3000)
+
     var count = setInterval(function(res){
       wx.switchTab({
         url: '../quote/quote',
         complete:function(res){}
       })
       clearInterval(count)
-    },3000)
+    },5000)
     },
 
   /**
@@ -27,6 +33,7 @@ Page({
    */
   onReady: function () {
     
+   
   },
 
   /**

@@ -12,10 +12,6 @@ swiper{
 }
 
 .quote_detail{
-  /* position: relative;
-  display: flex;
-  top:330rpx;
-  justify-content: center; */
   background-color: white;
   height: auto;
   width: 650rpx;
@@ -47,6 +43,7 @@ swiper{
   flex-direction: row;
   justify-content: center;
   top:500rpx;
+  margin: 0 0 20rpx 0
 }
 
 .quote_line_fr{
@@ -85,4 +82,8 @@ swiper{
   top: 320rpx;
   left: 580rpx;
   
+}
+
+.quote_style{
+  text-align:justify;
 }

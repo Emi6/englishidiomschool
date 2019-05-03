@@ -8,12 +8,23 @@ Page({
    */
   data: {
 
+    condition:false
+
   },
 
   /**
    * Lifecycle function--Called when page load
    */
   onLoad: function (options) {
+    var that=this
+    var currentUser = Bmob.User.current();
+    console.log(currentUser)
+    if (currentUser != null) {
+      that.setData({
+        condition:true
+      })
+    }
+
 
   },
 
@@ -67,6 +78,7 @@ Page({
   },
 
   login: function () {
+    var that=this
     wx.login({
       success: function (res) {
         console.log(11111);
@@ -103,7 +115,9 @@ Page({
           }
 
         })
-
+        that.setData({
+          condition:true
+        })
 
       },
       fail: function (res) {
@@ -127,6 +141,12 @@ Page({
   feedbacks:function(e){
     wx.navigateTo({
       url:'feedbacks/feedbacks'
+    })
+  },
+
+  officialacct:function(e){
+    wx.navigateTo({
+      url: 'officialacc/officialacct'
     })
   }
 })

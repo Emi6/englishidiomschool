@@ -13,41 +13,34 @@
   <view class='quote_line_fr'></view>
   </view>
   <view>{{ongetWord}}</view>
+  <view class='word-img'>
+  <image bindtap='playaudio' src='../../assets/tabbar/laba.png'>audio</image>
+  </view>
   <view>{{ongetTranslation}}</view>
-  <view style='text-align:left; margin:0rpx 20rpx;'>{{ongetParagraph}}</view>
+  <view style='text-align:justify; margin:10rpx 20rpx 0 20rpx'>{{ongetParagraph}}</view>
   <view style='text-align:right; margin-right:20rpx;'>——出自《{{ongetSource}}》</view>
   
-  
-
-  <!-- <swiper indicator-dots='true' current='{{current}}'bindchange='onSlideChangeEnd'>
-    <block wx:for="{{imgurls}}" wx:key="{{index}}">
-      <swiper-item>
-        <image class='img' src='{{item}}'/>
-      </swiper-item>
-    </block>
-  </swiper> -->
 </view>
 </view>
 
 <view class="button-sp-area" wx:if="{{index==0}}">
-  <button bindtap='onDaKa' hidden='{{false}}' disabled="{{status}}" >打卡</button>
+  <button bindtap='onDaKa' hidden='{{false}}' disabled="{{status}}" data-statu='open' >打卡</button>
   <button  open-type="share">转发</button>
-
+  
   <view class='drawer_screen' bindtap='powerDrawer'data-statu='close' wx:if="{{showModalStatus}}"/>
     <view class='drawer_box' animation="{{animationData}}" wx:if="{{showModalStatus}}">
-    <!-- <view class='drawer_box'> -->
-      <view class='drawer_title'>弹窗标题</view>
-      <label class='title col-0'>标题</label>
-      <input class='input_base input_h30 col-1'value='可自行定义内容'></input>
-    <!-- </view> -->
-      <view class="btn_ok" bindtap="powerDrawer" data-statu="close">确定</view>
+  
+      <view class='drawer_title'>温馨提示</view>
+      <label class='btn_title'>您尚未登录，无法使用打卡功能。</label>
+      
+      <view class="btn_ok" bindtap="powerDrawer" data-statu="close">请到“我的”一栏，点击头像登录，体验完整功能。</view>
     
     </view>
 </view>
 
 <view class="button-sp-area" wx:if="{{index>0}}">
   <button  open-type="share" >转发</button>
-  <button  hidden='{{true}}'>打卡</button>
+  <button  hidden='{{true}}'  >打卡</button>
  
 </view>
 

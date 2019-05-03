@@ -1,7 +1,7 @@
 <!--pages/material/booklist/booklist.wxml-->
 <view wx:for="{{bookList}}" wx:key="{{index}}">
   <navigator class='booklist-view' url="bookdetail/bookdetail?id={{index}}&bookname={{item.bookName}}">
-    <image class="booklist-img"src='{{item.bookImg}}'></image>
+    <image class="booklist-img"src='{{item.bookPicture}}'></image>
     <view class='booklist-text'>
       <view class='booklist-bookname'>{{item.bookName}}</view>
       <view class='booklist-bookdiscrb'>{{item.bookDiscrb}}</view>

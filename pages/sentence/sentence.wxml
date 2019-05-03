@@ -1,0 +1,62 @@
+<!--pages/sentence/sentence.wxml-->
+
+<!-- <button bindtap='start' class='btn'>开始录音</button>
+<button bindtap='stop' class='btn'>结束录音</button>
+<button bindtap='play'class='btn'>播放录音</button>
+<audio src="{{src}}"></audio> -->
+
+
+<view class="header">
+<text style='float:left'>2019-4-17</text>
+<text style='float:right'>往期回顾</text>
+</view>
+
+<view class="exp">
+  <view class="exp-1">
+    <view class="exp-1-1">
+    <text>you deserve it!</text>
+    <text>你值得拥有！</text>
+    </view>
+  </view>
+  <view class="exp-1-2">
+  <image src='../../assets/tabbar/speaker.png' data-url='{{ongetSpeakUrl}}' data-type='1' bindtap='onCheckStatus'>speaker</image>
+  </view>
+  
+
+  <view class="exp-2">
+    <view class="exp-avatar" data-type='2' data-url='{{ongetExplainUrl}}' bindtap='onCheckStatus'>
+     
+    
+    </view>
+    <view class='exp-heart'><image src='../../assets/tabbar/heart-1.png'></image></view>
+    <text class='exp-2-name'>Emily</text>
+    <text class='exp-2-up'>5人赞</text>
+    <text class='exp-2-time'>00:28/00:58</text>
+  
+  
+  </view>
+
+</view>
+
+<view class="follow">
+ <view class='follow-button-1'>
+  <button class="weui-btn " type="primary" >开始</button>
+  </view>
+   <view class='follow-button-2'>
+  <button class="weui-btn " type="primary" >结束</button>
+  
+  </view>
+
+</view>
+
+<view class="display">
+<view class='display-avatar'></view>
+<text class='display-user'>空谷幽兰</text>
+<text class='display-time'>2019-04-18 05:15:50</text>
+<text class='display-like'>7</text>
+<view class='display-heart'><image src='../../assets/tabbar/heart-1.png'></image></view>
+<view class='line'></view>
+
+
+
+</view> 

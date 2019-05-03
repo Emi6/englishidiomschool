@@ -18,17 +18,7 @@ Page({
     var that=this;
     console.log(params)
     this.rdBookList(params.booktype);
-    // console.log(byNum)
-    // wx.request({
-    //   url:"https://www.easy-mock.com/mock/5c116c6ab45e5d3babb4fc8e/itsme/sharewithme",
     
-      
-    // success:function(res){
-    //   that.setData({
-    //     bookList:res.data.data.material[params.id].bookList
-    //   })
-    // }
-    // })
 
 
   },

@@ -12,10 +12,7 @@ swiper{
 }
 
 .quote_detail{
-  /* position: relative;
-  display: flex;
-  top:330rpx;
-  justify-content: center; */
+  
   background-color: white;
   height: auto;
   width: 650rpx;
@@ -47,6 +44,7 @@ swiper{
   flex-direction: row;
   justify-content: center;
   top:300rpx;
+  margin: 0 0 20rpx 0
 }
 
 .quote_line_fr{
@@ -84,5 +82,60 @@ swiper{
   position: absolute;
   top: 160rpx;
   left: 580rpx;
+
+
   
+}
+
+.drawer_screen{
+width: 100%;
+height:100%;
+position:fixed;
+top: 0;
+left: 0;
+/* z-index: 1000; */
+background: #000;
+opacity: 0.5;
+/* overflow: hidden */
+
+}
+
+
+.drawer_box{
+  position:fixed;
+  top:250rpx;
+  width:600rpx;
+  
+  left:75rpx;
+
+  background:#fafafa;
+
+ 
+  
+
+}
+.drawer_title{
+
+   padding:20rpx 0;
+   font:20px;
+   text-align: center;
+
+   color: #000
+
+
+}
+
+.btn_ok{
+  margin: 0 20rpx
+}
+
+.btn_title{
+   margin: 0 20rpx
+}
+
+.word-img image{
+
+  height: 50rpx;
+  width: 50rpx;
+
 }

@@ -1,10 +1,10 @@
 <!--pages/mine/feedbacks/feedbacks.wxml-->
-<text>反馈留言</text>
+<view class='title'>反馈留言:</view>
 
-<text>如果你在使用过程中，遇到任何问题，或者对我们有任何期许，欢迎在此反馈，你的意见建议是我们前进的动力</text>
-
+<view class='describe'>如果你在使用过程中，遇到任何问题，欢迎在此反馈，你的意见建议是我们前进的动力。</view>
 
 <form bindsubmit='bindFormSubmit'>
 <textarea placeholder='请留言' name='textarea'></textarea>
-<button form-type='submit'>提交</button>
+<view wx:if="{{submit_status}}" class='submitSuccess'>提交成功</view>
+<button form-type='submit'disabled="{{submit_status}}" class='submitbut' size='mini'>提交</button>
 </form>
