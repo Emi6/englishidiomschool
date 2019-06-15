@@ -1,0 +1,94 @@
+/* pages/sentence/sentence/reviewback.wxss */
+
+page{
+  background-color: #CCCCCC;
+  /* height: 900px; */
+}
+
+.inrow{
+ display:block;
+ position:relative;
+ top:18rpx;
+
+}
+
+.left-box{
+ position:relative;
+ top:18rpx;
+ left: 26rpx;
+ height: 112rpx;
+ width:84rpx;
+ background-color: #81D3F8;
+ box-shadow: 5rpx 5rpx grey;
+}
+
+.right-box{
+  position:absolute;
+  top:18rpx;
+  left:128rpx;
+  width: 622rpx;
+  height:112rpx;
+  background-color: #FFFFFF;
+  box-shadow: 5rpx 5rpx grey ;
+  
+}
+
+/* .wrap{
+
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+} */
+
+.year{
+  font-size:12px;
+  position: absolute;
+  top:16rpx;
+  left:10rpx;
+
+}
+
+.month{
+  position:absolute;
+  font-size:12px;
+  left:6rpx;
+  top:58rpx;
+}
+
+.en-text{
+ font-size:14px;
+ position:absolute;
+ top:22rpx ;
+ left:20rpx ;
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space: nowrap;
+ max-width: 470rpx;
+ 
+
+}
+
+.cn-text{
+ font-size:14px;
+ position:absolute;
+ top:54rpx ;
+ left:20rpx ;
+ overflow: hidden;
+ text-overflow:ellipsis;
+ white-space: nowrap;
+ max-width: 470rpx;
+ 
+}
+
+.go-to-study{
+ font-size:14px;
+ color:#02A7F0;
+ position:absolute;
+ top:44rpx ;
+ left:496rpx ;
+}
+
+.inrow_block{
+  position: relative;
+  margin-bottom: 16rpx
+}

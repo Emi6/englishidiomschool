@@ -1,11 +1,11 @@
 <!--pages/mine/officialacc/officialacct.wxml-->
 <view class="img" >
-<image src='http://bmob-cdn-22880.b0.upaiyun.com/2019/03/03/442a1a314015704780e149c304c7e4a6.jpg'></image>
+<image src='http://bmob-cdn-22880.bmobcloud.com/2019/05/21/5f8c4f224034a8d780d5fb933e9e52b3.jpg'></image>
 
 </view>
 
 <view class="discription" >
 <text>欢迎关注官方公众号</text>
-<text class='bold'>《英语俚语学堂》\n</text>
+<text class='bold'>《英语小馆儿》\n</text>
 <text>获取更多英语知识。</text>
 </view>

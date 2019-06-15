@@ -38,7 +38,16 @@ swiper{
   height: 440rpx;
 }
 
+.btn1{
+  border-style: solid;
+  border-width: 0.5px 1px 0.5px 0.5px;
+  border-color: darkgray;
+  background-color: gainsboro
+  
+}
+
 .button-sp-area{
+
   position: relative;
   display: flex; 
   flex-direction: row;
@@ -76,13 +85,14 @@ swiper{
   position: absolute;
   top: 10rpx;
   left: 300rpx;
+  color: white;
 }
 
 .word_menu_back{
   position: absolute;
   top: 160rpx;
   left: 580rpx;
-
+  color: white;
 
   
 }

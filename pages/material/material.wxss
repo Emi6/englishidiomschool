@@ -48,3 +48,17 @@
 .line{
   border-bottom: 1rpx solid #F0F0F0
 }
+
+.ad{
+  position: relative;
+  display: flex;
+  /* top: 620rpx; */
+  justify-content: center;
+  align-items:center;
+  
+}
+
+.ad image{
+  width: 640rpx;
+  height: 300rpx
+}

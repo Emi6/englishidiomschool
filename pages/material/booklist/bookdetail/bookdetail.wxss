@@ -1,4 +1,8 @@
 /* pages/material/booklist/bookdetail/bookdetail.wxss */
+page{
+  background-color: #E3EDCD;
+}
+
 .booklist-img{
   height: 220rpx;
   width: 200rpx;
