@@ -1,0 +1,19 @@
+<!--pages/sentence/sentence/reviewback.wxml-->
+
+<view class='inrow'>
+    <view wx:for="{{clip_list}}" wx:key="{{index}}">
+      <view class='inrow_block'>
+          <view class='left-box'>
+              <text class='year' >{{item.year}}</text>
+              <text class='month'>0{{item.month}}.{{item.day}}</text>
+          </view>
+          <view class='right-box'>
+              <text class='en-text'>{{item.sentence}}</text>
+              <text class='cn-text'>{{item.CNtrans}}</text>
+               <navigator class='material-view' url="sentencedetail/sentencedetail?year={{item.year}}&month={{item.month}}&day={{item.day}}">
+              <text class='go-to-study' bindtap='goStudy' data-index='{{index}}'>去学习</text>
+              </navigator>
+          </view>
+      </view>
+    </view> 
+</view>

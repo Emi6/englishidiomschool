@@ -1,3 +1,4 @@
+<!--pages/sentence/sentence/sentencedetail/sentencedetail.wxml-->
 <!--pages/sentence/sentence.wxml-->
 
 <!-- <button bindtap='start' class='btn'>开始录音</button>
@@ -8,7 +9,7 @@
 
 <view class="header">
 <text style='float:left'>{{onYear}}-{{onMonth}}-{{onDay}}</text>
-<navigator url="../sentence/sentence/reviewback">
+<navigator url="../../sentence/reviewback">
 <text style='float:right' bindtap='reviewBack'>往期回顾</text>
 </navigator>
 </view>
@@ -16,30 +17,30 @@
 <view class="exp">
   <view class="exp-1">
     <view class="exp-1-1">
-    <!-- <view class='exp-sentence'> -->
-    <text >{{onSentence}}</text>
-  
-    <text >{{onCNtrans}}</text>
-     <!-- </view> -->
+    <text>{{onSentence}}</text>
+    <text>{{onCNtrans}}</text>
     </view>
   </view>
   <view class="exp-1-2">
-  <image src='../../assets/tabbar/play.png' wx:if="{{playstatus_1%2==0}}" data-url='{{ongetSpeakUrl}}' data-type='1' bindtap='onCheckStatus'>speaker</image>
-   <image src='../../assets/tabbar/stop.png' wx:if="{{playstatus_1%2==1}}" data-url='{{ongetSpeakUrl}}' data-type='1' bindtap='onCheckStatus'>speaker</image>
+
+
+  <image src='../../../../assets/tabbar/play.png' wx:if="{{playstatus_1%2==0}}" data-url='{{ongetSpeakUrl}}' data-type='1' bindtap='onCheckStatus'>speaker</image>
+  <image src='../../../../assets/tabbar/stop.png' wx:if="{{playstatus_1%2==1}}" data-url='{{ongetSpeakUrl}}' data-type='1' bindtap='onCheckStatus'>speaker</image>
   </view>
   
 
   <view class="exp-2">
-    
-     <image class="exp-avatar" src='{{teacherAvatar}}'></image> 
+    <image class="exp-avatar" src='{{teacherAvatar}}'></image> 
+
+    <image class="exp-play" src='../../../../assets/tabbar/play.png' wx:if="{{playstatus_2%2==0}}"  data-type='2' data-url='{{ongetExplainUrl}}' bindtap='onCheckStatus2'>speaker</image>
+   <image class="exp-play" src='../../../../assets/tabbar/stop.png' wx:if="{{playstatus_2%2==1}}" data-type='2' data-url='{{ongetExplainUrl}}' bindtap='onCheckStatus2'>speaker</image>
      
-    <image class="exp-play" src='../../assets/tabbar/play.png' wx:if="{{playstatus_2%2==0}}"  data-type='2' data-url='{{ongetExplainUrl}}' bindtap='onCheckStatus2'>speaker</image>
-   <image class="exp-play" src='../../assets/tabbar/stop.png' wx:if="{{playstatus_2%2==1}}" data-type='2' data-url='{{ongetExplainUrl}}' bindtap='onCheckStatus2'>speaker</image>
-   
+    
+
     <view class='exp-heart'>
-    <image src='../../assets/tabbar/heart-1.png' wx:if="{{praise_status==false}}" bindtap='clickPraise'
+    <image src='../../../../assets/tabbar/heart-1.png' wx:if="{{praise_status==false}}" bindtap='clickPraise'
     data-day='{{cur_day}}' data-month='{{cur_month}}' data-year='{{cur_year}}'> </image>
-    <image src='../../assets/tabbar/heart-2.png' wx:if="{{praise_status==true}}"  bindtap='clickPraise'
+    <image src='../../../../assets/tabbar/heart-2.png' wx:if="{{praise_status==true}}"  bindtap='clickPraise'
     data-day='{{cur_day}}' data-month='{{cur_month}}' data-year='{{cur_year}}'> </image>
     
     
@@ -55,7 +56,7 @@
 
 <view class="follow">
  <view class='follow-button-1'>
-  <button class="weui-btn " type="primary" bindtap="onRecord" >开始</button>
+  <button class="weui-btn " type="primary" bindtap="onRecord" disabled='true'>开始</button>
   </view>
 
   <view class='drawer_screen' catchtouchmove='true' wx:if="{{showUserStatus}}"/>
@@ -71,7 +72,7 @@
     </view>
 
    <view class='follow-button-2'>
-  <button class="weui-btn " type="primary" bindtap='stopRecord' >结束</button>
+  <button class="weui-btn " type="primary" bindtap='stopRecord' disabled='true' >结束</button>
   
   </view>
 
@@ -96,17 +97,18 @@
     
       <image class='display-avatar' bindtap='onImitation' data-imiturl='{{item.url}}' src='{{item.avatar}}'></image> 
 
-       <image class="display-play" src='../../assets/tabbar/play.png' wx:if="{{playstatus_3[index]%2==0}}"  bindtap='onImitation' data-imiturl='{{item.url}}'data-index="{{index}}">speaker</image>
-   <image class="display-play" src='../../assets/tabbar/stop.png' wx:if="{{playstatus_3[index]%2==1}}" bindtap='onImitation' data-imiturl='{{item.url}}'data-index="{{index}}">speaker</image>
+    <!-- <image class="display-play" src='../../../../assets/tabbar/play.png' wx:if="{{playstatus_3%2==0}}"  bindtap='onImitation' data-imiturl='{{item.url}}'>speaker</image>
+   <image class="display-play" src='../../../../assets/tabbar/stop.png' wx:if="{{playstatus_3%2==1}}" bindtap='onImitation' data-imiturl='{{item.url}}'>speaker</image> -->
 
-
+    <image class="display-play" src='../../../../assets/tabbar/play.png' wx:if="{{playstatus_3[index]%2==0}}"  bindtap='onImitation' data-imiturl='{{item.url}}'data-index="{{index}}">speaker</image>
+   <image class="display-play" src='../../../../assets/tabbar/stop.png' wx:if="{{playstatus_3[index]%2==1}}" bindtap='onImitation' data-imiturl='{{item.url}}'data-index="{{index}}">speaker</image>
   
       <text class='display-user'>{{item.user}}</text>
       <text class='display-time'>{{item.createdAt}}</text>
       <text class='display-like'>{{item.likenum}}</text>
       <view class='display-heart'>
-        <image wx:if ="{{like_status[index]==false}}" src='../../assets/tabbar/heart-1.png' bindtap='clickLike' data-clipid="{{item.clip_id}}" data-index="{{index}}"></image>
-        <image wx:else src='../../assets/tabbar/heart-2.png' bindtap='clickLike' data-clipid="{{item.clip_id}}" data-index="{{index}}"></image>
+        <image wx:if ="{{like_status[index]==false}}" src='../../../../assets/tabbar/heart-1.png' bindtap='clickLike' data-clipid="{{item.clip_id}}" data-index="{{index}}"></image>
+        <image wx:else src='../../../../assets/tabbar/heart-2.png' bindtap='clickLike' data-clipid="{{item.clip_id}}" data-index="{{index}}"></image>
       
       </view>
       <view class='line'></view>

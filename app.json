@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/quote/quote",
     "pages/word/word",
@@ -11,47 +11,44 @@
     "pages/mine/calendars/calendars",
     "pages/mine/feedbacks/feedbacks",
     "pages/mine/officialacc/officialacct",
-    "pages/sentence/sentence"
-    
+    "pages/sentence/sentence",
+    "pages/sentence/sentence/reviewback",
+    "pages/sentence/sentence/sentencedetail/sentencedetail"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EEEEEE",
-    "navigationBarTitleText": "英语俚语学堂",
-    "navigationBarTextStyle":"black"
+    "navigationBarTitleText": "英语小馆儿",
+    "navigationBarTextStyle": "black"
   },
-  "tabBar":{
-    "selectedColor":"#d81e06",
-    "backgroundColor":"#EEEEEE",
-    "list":[
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#EEEEEE",
+    "list": [
       {
-        "pagePath":"pages/quote/quote",
-        "iconPath":"assets/tabbar/geyan2.png",
-        "selectedIconPath":"assets/tabbar/geyan22.png",
-        "text":"每日格言"
+        "pagePath": "pages/quote/quote",
+        "iconPath": "assets/tabbar/geyan2.png",
+        "selectedIconPath": "assets/tabbar/geyan22.png",
+        "text": "每日格言"
       },
-
       {
         "pagePath": "pages/word/word",
         "iconPath": "assets/tabbar/beidanci.png",
         "selectedIconPath": "assets/tabbar/beidanci2.png",
         "text": "每日单词"
       },
-
       {
         "pagePath": "pages/sentence/sentence",
         "iconPath": "assets/tabbar/icon_xuexiziliao.png",
         "selectedIconPath": "assets/tabbar/ziliao2.png",
         "text": "每日口语"
       },
-
       {
         "pagePath": "pages/material/material",
         "iconPath": "assets/tabbar/icon_xuexiziliao.png",
         "selectedIconPath": "assets/tabbar/ziliao2.png",
         "text": "资料推荐"
       },
-
       {
         "pagePath": "pages/mine/mine",
         "iconPath": "assets/tabbar/wode.png",
@@ -59,5 +56,6 @@
         "text": "我的"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
